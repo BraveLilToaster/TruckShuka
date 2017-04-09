@@ -1,0 +1,54 @@
+// Color
+$light-blue-300: #4FC3F7
+$transparent: rgba(0,0,0,0)
+$red: #e42537
+$light-blue: #11abe9
+
+$color-primary: $light-blue
+$color-primary-hover: $light-blue-300
+$color-secondary: $red
+
+// Text
+$dark-primary: rgba(0, 0, 0, 0.87)
+$dark-secondary: rgba(0, 0, 0, 0.54)
+$dark-disabled: rgba(0, 0, 0, 0.38)
+$dark-divider: rgba(0, 0, 0, 0.12)
+
+$light-primary: rgba(255, 255, 255, 1.00)
+$light-secondary: rgba(255, 255, 255, 0.70)
+$light-disabled: rgba(255, 255, 255, 0.50)
+$light-divider: rgba(255, 255, 255, 0.12)
+
+// Nav Height
+$nav-height: 4em
+
+// Box Shadows
+$shadow-1: 0px 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 0px 2px 2px rgba(0, 0, 0, 0.098), 0px 0px 5px 1px rgba(0, 0, 0, 0.084)
+$shadow-2: 0 3px 1px -2px rgba(0,0,0,.14),0 2px 2px 0 rgba(0,0,0,.098),0 1px 5px 0 rgba(0,0,0,.084)
+
+// Vendor Prefix Mixin
+@mixin vendor-prefix($name, $argument)
+    -webkit-#{$name}: #{$argument}
+    -ms-#{$name}: #{$argument}
+    -moz-#{$name}: #{$argument}
+    -o-#{$name}: #{$argument}
+    #{$name}: #{$argument}
+
+// Media Queries
+$small-range-low: 0
+$small-range-high: 600
+$medium-range: 960
+$large-range: 1200
+$screen: "only screen" !default
+$landscape: "#{$screen} and (orientation: landscape)" !default
+$portrait: "#{$screen} and (orientation: portrait)" !default
+
+// 0, 600px
+$small-up: $screen
+$small-only: "#{$screen} and (max-width: #{$small-range-high}px)"
+// 600px-960px
+$medium-up: "#{$screen} and (min-width: #{$small-range-high+1}px)"
+$medium-only: "#{$screen} and (min-width:#{$small-range-high+1}px) and (max-width:#{$medium-range}px)" !default
+// 960-1200px
+$large-up: "#{$screen} and (min-width:#{$medium-range+1}px)"
+$large-only: "#{$screen} and (min-width:#{$medium-range+1}px) and (max-width:#{$large-range}px)" !default

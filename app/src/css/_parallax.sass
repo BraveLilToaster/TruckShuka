@@ -1,0 +1,57 @@
+.parallax
+  position: relative
+  &:after
+    content: ""
+    display: block
+    @media #{$medium-up}
+      margin-bottom: 3em
+.parallax-window
+  position: relative
+  height: 400px
+  @media #{$medium-up}
+    height: 600px
+.parallax-slider
+  position: absolute
+  top: 0
+  height: 400px
+  width: 100%
+  @media #{$medium-up}
+    height: 600px
+.parallax-content
+  color: $light-primary
+  text-shadow: 2px 1px 1px $dark-primary
+  @media #{$medium-up}
+    padding: 0 7em
+  @media #{$large-up}
+    padding: 0 16em
+.parallax-title
+  margin-top: 0
+  &.header
+    text-align: center
+    font-size: 3em
+  @media #{$small-only}
+    text-align: center
+    font-size: 3em
+    text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.87)
+.feature
+  margin-bottom: 3em
+.feature-text
+  margin-top: 0
+.feature-images
+  position: relative
+  background: #fff
+  .row
+    margin: 0
+  .col
+    padding: 0
+  .image-responsive
+    width: 100%
+  .image
+    content: ''
+    position: relative
+    z-index: 100
+    height: 320px
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    text-align: center

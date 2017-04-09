@@ -1,0 +1,159 @@
+navbar
+  background: $dark-primary
+  height: $nav-height
+  width: 100%
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 999
+  &:after
+    content: ''
+  display: block
+  clear: both
+  ul
+    margin: 0
+    padding: 0
+    list-style-type: none
+    max-height: 100vh
+    overflow: hidden
+    margin-left: auto
+    letter-spacing: .1rem
+    @include prefix((transition: max-height 0.8s, transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1)), webkit moz ms)
+    @media #{$small-only}
+      background: $dark-primary
+      position: absolute
+      top: 64px
+      width: 100%
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.16), 0 4px 10px 0 rgba(0, 0, 0, 0.12)
+    @media #{$medium-up}
+      padding: 20px 8px
+      float: right
+    li
+      @media #{$medium-up}
+        display: inline
+      a
+        @extend .basic-link
+        padding: 16px 20px
+        width: 100%
+        height: 100%
+        display: block
+        font-weight: 300
+        @media #{$small-only}
+          @include prefix((transition: background 0.3s, transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1)), webkit moz ms)
+          &:hover
+            color: $dark-primary
+            background: $light-secondary
+        @media #{$medium-up}
+          padding: 8px 8px
+          display: inline
+          border-bottom: 2px solid $transparent
+          @include prefix((transition: border 0.3s, transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1)), webkit moz ms)
+          &:hover
+            border-bottom: 2px solid $light-primary
+
+.logo
+  height: 2em
+  padding: .5em 0
+  box-sizing: initial
+  top: 10px
+  position: absolute
+  @media #{$medium-up}
+    padding: .5em 2rem
+    padding-right: 0
+.logo-container
+  display: inline
+  @media #{$small-only}
+    width: 3em
+    margin: auto
+    position: absolute
+    top: 0
+    right: 0
+    left: 0
+.menu-icon
+  height: 32px
+  padding: 8px
+  margin: 8px
+  cursor: pointer
+  border-radius: 100%
+  box-sizing: initial
+  @include prefix((transition: background 0.5s, transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1)), webkit moz ms)
+  &:hover
+    background: $dark-secondary
+  @media #{$medium-up}
+    display: none
+.hide-menu
+  max-height: 0
+  @media #{$medium-up}
+    max-height: 100%
+    display: inherit
+.basic-link
+  color: #fff
+  text-decoration: none
+
+.menu-button
+  @media #{ $small-only }
+    vertical-align: middle
+    padding: 1rem 1rem 1rem 0
+  @media #{ $medium-up }
+    display: none
+
+.sidenav
+  width: 230px
+  min-width: 230px
+  max-width: 230px
+  box-sizing: border-box
+  position: absolute
+  +vendor-prefix(flex-direction, column)
+  z-index: 60
+  bottom: 0
+  overflow: auto
+.sidenav-open
+  left: 0
+  top: 0
+  +vendor-prefix(transform, translate3d(0,0,0))
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,.2),0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12)
+.sidenav-closed
+  left: 0
+  top: 0
+  +vendor-prefix(transform, translate3d(100%,0,0))
+  display: none
+
+.center-menu
+  padding: 0 1rem
+  margin: 0 auto
+  max-width: 780px
+  position: relative
+.horizontalmenu
+  @media #{ $small-only }
+    display: none
+  display: inline-block
+  vertical-align: middle
+  position: absolute
+  right: 1rem
+  top: 16px
+  ul
+    padding: 0
+    margin: 0
+    list-style: none
+  li
+    float: left
+    padding-left: 1rem
+    display: block
+    color: #fff
+    font-weight: 600
+    a
+      text-decoration: none
+      color: #fff
+      text-shadow: 1px 1px 0 #333
+      font-size: 1.2rem
+    ul
+      display: none
+      position: absolute
+    &:hover ul
+      display: block
+      background: none
+      height: auto
+      width: 8em
+    ul li
+      clear: both
+      border-style: none

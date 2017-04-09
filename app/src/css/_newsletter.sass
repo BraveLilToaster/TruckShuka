@@ -1,0 +1,86 @@
+/* MailChimp Form Embed Code - Slim - 12/15/2015 v10.7
+
+#mc_embed_signup
+  form
+    display: block
+    position: relative
+    text-align: left
+  h2
+  input
+    -webkit-appearance: none
+    &[type=checkbox]
+      -webkit-appearance: checkbox
+    &[type=radio]
+      -webkit-appearance: radio
+  .clear
+    clear: none
+    display: inline
+  div
+    &#mce-responses
+      float: left
+      top: -1.4em
+      padding: 0em .5em 0em .5em
+      overflow: hidden
+      width: 90%
+      margin: 0 5%
+      clear: both
+    &.response
+      margin:  1em 0
+      padding: 1em .5em .5em 0
+      font-weight: bold
+      float: left
+      top: -1.5em
+      z-index: 1
+      width: 80%
+  #mce-error-response
+    display: none
+  #mce-success-response
+    color: #529214
+    display: none
+  label.error
+    display: block
+    float: none
+    width: auto
+    margin-left: 1.05em
+    text-align: left
+    padding: .5em 0
+/* End MailChimp Form Embed Code - Slim - 12/15/2015 v10.7
+
+.newsletter
+  background: $dark-primary
+  padding: 2em
+  h2
+    margin: 0
+    padding:  0 0 1em 0
+    text-align: center
+    color: $light-primary
+    font-weight: bold
+    font-size: 1.4em
+.newsletter-form
+  margin: 0 auto
+  max-width: 600px
+  position: relative
+.newsletter-input
+  height: 48px
+  font-size: 1em
+  padding: 0 .8em
+  display: inline-block
+  +vendor-prefix(border-radius, 3px 0 0 3px)
+  +calc(width, '100% - 134px')
+.signup-button
+  @extend .button
+  height: 48px
+  font-size: .8em
+  padding: .8em
+  color: #fff
+  background-color: $color-primary
+  text-transform: uppercase
+  font-weight: bold
+  display: inline-block
+  position: absolute
+  border-radius: 0px 3px 3px 0px
+  letter-spacing: .1em
+  +vendor-prefix(border-radius, 0 3px 3px 0)
+  &:hover
+    background-color: $color-primary-hover
+

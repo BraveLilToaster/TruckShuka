@@ -1,0 +1,31 @@
+.social-icons
+  text-align: center
+.social-icons-top, .social-icons-bottom
+  margin: 0 0 1rem
+  @media #{ $medium-up }
+    display: inline-block
+  a
+    width: 48px
+    padding: 1rem
+    text-decoration: none
+    img
+      width: 48px
+      cursor: pointer
+      &.facebook
+        fill: rgba(78, 113, 168, 0)
+        @include prefix((transition: fill 0.3s, transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1)), webkit moz ms)
+      &:hover
+        .facebook
+          fill: rgba(78, 113, 168, 1)
+
+.phone, .address, .copyright
+  text-align: center
+  margin-bottom: 1rem
+  font-size: 1rem
+  font-size: 1.1rem
+.phone
+  a
+    @extend .basic-link
+.address
+  address
+    font-style: normal

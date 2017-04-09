@@ -1,0 +1,44 @@
+.hero
+  background: center center no-repeat
+  background-size: cover
+  padding-top: 4rem
+  @media #{ $small-only }
+    min-height: calc(100vh - 8em)
+  @media #{ $medium-up }
+    height: 40rem
+  @media #{ $large-up }
+.hero-content
+  padding: 0 1.2rem 1.2rem
+  margin: 0 auto
+  color: $light-primary
+  @media #{ $small-only }
+    text-align: center
+  @media #{ $medium-up }
+    max-width: 960px
+    width: 100%
+  h1
+    font-size: 2.2rem
+    margin-top: 0
+    letter-spacing: .2rem
+    display: inline-block
+    background: $dark-primary
+    padding: 0.4em 0.3em 0.2em
+    @media #{ $small-only }
+    @media #{ $medium-up }
+  p
+    font-size: 1.4rem
+    margin: 0
+    letter-spacing: .1rem
+    display: inline-block
+    background: $dark-primary
+    padding: 0.4em 0.3em 0.2em
+
+.menu-item
+  margin-bottom: 1em
+.menu-img
+  width: 100%
+.menu-item-price
+  float: right
+.menu-list
+  list-style-type: none
+  padding: 0
